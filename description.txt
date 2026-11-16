@@ -1,0 +1,45 @@
+Créer un logiciel complet de gestion de réservations pour salles de réunion avec
+système de facturation automatique. Solution pour petites entreprises et espaces de
+coworking.
+
+Objectifs :
+•Gérer les réservations avec vérification des conflits
+• Calculer automatiquement le coût des réservations
+• Générer des factures simples
+• Fournir des statistiques d'utilisation
+
+Tâches à Réaliser :
+
+#Tâche 1 : Modèle de Données Complet
+	• Créer une Reservation avec : id, nom_client, salle, date, heure_début,
+	heure_fin, nombre_personnes, tarif, statut
+	• Créer une Salle avec : nom, capacité, tarif_horaire, équipements
+#Tâche 2 : Système de Réservation
+	• Vérifier d'abord la disponibilité
+	• Vérifier que la salle a la capacité suffisante
+	• Empêcher les réservations qui se chevauchent
+	• Calcul automatique du tarif : tarif_horaire × durée
+#Tâche 3 : Gestion des Tarifs
+	• Appliquer différents tarifs selon les salles
+	• Calculer le coût total automatiquement
+	• Sauvegarder les tarifs dans un fichier de configuration
+#Tâche 4 : Génération de Factures
+	• Format simple avec : client, salle, date, durée, montant
+	• Sauvegarder les factures dans des fichiers dédiés
+#Tâche 5 : Module de Statistiques
+	• Calculer le chiffre d'affaires par salle
+	• Compter le nombre de réservations par mois
+	• Afficher les salles les plus populaires
+#Tâche 6 : Persistance des Données
+	• Sauvegarder toutes les réservations dans un fichier
+	• Charger les données au démarrage de l'application
+	• Sauvegarder automatiquement après chaque modification
+#Tache 7(celle qu'on va developper)
+
+Remarque : Ajouter au minimum une autre tâche pour améliorer le traitement de
+cette application.
+
+Livrables :
+● Lien GitHub
+● Documentation sur GitHub dans le fichier readme.md
+Déposer votre lien GitHub sur Google Classroom

@@ -1,15 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ncurses.h>
-#include "utils.c"
+#include <string.h>
+
+#include "../include/utils.h"
 
 int main() {
-
+/*  ====  Testing the function creer_reservation ============
+ *  
   reservation R1;
   R1.id_reservation = 1;
   printf("Donnez le nom du client >>>  ");
-  scanf("%s", &R1.nom_client);
-  R1.nom_salle_reservation = "AVICENNE";
+  scanf("%99s", R1.nom_client);
+  strcpy(R1.nom_salle_reservation, "AVICENNE");
   R1.date_debut.jour = 15;
   R1.date_debut.mois = 3;
   R1.date_debut.annee = 2017;
@@ -24,5 +27,8 @@ int main() {
   R1.date_fin.secondes = 23;
   R1.nb_personnes = 25;
   R1.tarif = 1520;
-  R1.statut = "EN COURS";
+  R1.statut = EN_COURS;
+  creer_reservation(R1.id_reservation, R1.nom_client, R1.nom_salle_reservation, R1.date_debut, R1.date_fin, R1.nb_personnes, R1.tarif, R1.statut);
+*/
+
 }

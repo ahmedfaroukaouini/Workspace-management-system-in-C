@@ -1,19 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-#include <cjson.h>
-#include "utils.h"
+#include <string.h>
+#include <cjson/cJSON.h>
+#include "../include/utils.h"
 
 
-void creer_reservation(int id_reservation, char nom_client, char salle_reservation, date date_debut, date date_fin, int nb_personnes, float tarif, char statut) {
+int creer_reservation(int id_reservation, const char * const  nom_client,const char * const nom_salle_reservation, date date_debut, date date_fin, int nb_personnes, float tarif, char statut) {
 // create a cJSON object
    cJSON *json = cJSON_CreateObject();
    cJSON_AddNumberToObject(json, "id_reservation", id_reservation);
-   cJSON_AddStringToObject(json, "nom_client", nom_client);
-   cJSON_AddNumberToObject(json, "salle", salle_reservation);
-   char str_jour_debut, str_mois_debut, str_annee_debut, str_jour_fin, str_mois_fin, str_annee_fin; 
-   cJSON_AddStringToObject(json, "date_debut", sprintf(str_date_debut, "%d", date_debut.jour) +"-"+ sprintf(str_mois_debut,"%d",date_debut.mois) +"-"+ sprintf(str_date_debut, "%d", date_debut.annee)); 
-   cJSON_AddStringToObject(json, "date_debut", sprintf(str_date_fin, "%d", date_fin.jour) +"-"+ sprintf(str_mois_fin,"%d",date_fin.mois) +"-"+ sprintf(str_date_fin, "%d", date_fin.annee));
+   cJSON_AddStringToObject(json, "nom_client",nom_client);
+   cJSON_AddStringToObject(json, "salle", nom_salle_reservation);
+   char str_date_debut[20];
+   char str_date_fin[20];
+   sprintf(str_date_debut, "%02d-%02d-%04d", date_debut.jour, date_debut.mois, date_debut.annee);
+   sprintf(str_date_fin, "%02d-%02d-%04d", date_fin.jour, date_fin.mois, date_fin.annee);
+   cJSON_AddStringToObject(json, "date_debut", str_date_debut);
+   cJSON_AddStringToObject(json, "date_fin", str_date_fin); 
    cJSON_AddNumberToObject(json, "nb_personnes", nb_personnes );
    cJSON_AddNumberToObject(json, "tarif", tarif);
    cJSON_AddNumberToObject(json, "statut", statut);
@@ -24,14 +28,14 @@ void creer_reservation(int id_reservation, char nom_client, char salle_reservati
    char *json_str = cJSON_Print(json);
 
    // write the JSON string to a file
-   FILE *fp = fopen("data/reservations.json", "w");
+   FILE *fp = fopen("data/reservations.json", "a");
    if (fp == NULL) {
        printf("Error: Unable to open the file.\n");
        return 1;
    }
    printf("%s\n", json_str);
    fputs(json_str, fp);
-   fclose
+   fclose(fp);
    // free the JSON string and cJSON object
    cJSON_free(json_str);
    cJSON_Delete(json);

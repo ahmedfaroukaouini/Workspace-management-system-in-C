@@ -1,0 +1,19 @@
+{
+	"id_reservation":	1,
+	"nom_client":	"amine",
+	"salle":	"AVICENNE",
+	"date_debut":	"15-03-2017",
+	"date_fin":	"16-03-2017",
+	"nb_personnes":	25,
+	"tarif":	1520,
+	"statut":	1
+}{
+	"id_reservation":	1,
+	"nom_client":	"ahmed",
+	"salle":	"AVICENNE",
+	"date_debut":	"15-03-2017",
+	"date_fin":	"16-03-2017",
+	"nb_personnes":	25,
+	"tarif":	1520,
+	"statut":	1
+}

@@ -1,5 +1,5 @@
-#ifndef utils
-#define utils
+#ifndef UTILS_H
+#define UTILS_H
 
 /***
 typedef struct {
@@ -15,7 +15,7 @@ typedef struct {
 typedef struct {
   
   int jour;
-  enum mois {1,2,3,4,5,6,7,8,9,10,11,12};
+  enum mois { JANVIER =  1, FEVRIER = 2, MARS = 3, AVRIL = 4, MAI = 5, JUIN = 6, JUILLET = 7, AOUT = 8, SEPTEMBRE = 9, OCTOBRE = 10, NOVEMBRE = 11, DECEMBRE = 12} mois;
   int annee;
   int heures, minutes, secondes;
 
@@ -37,17 +37,16 @@ typedef struct {
 typedef struct {
 
   int id_reservation;
-  char nom_client;
-  char nom_salle_reservation;
+  char nom_client[100];
+  char nom_salle_reservation[100];
   date date_debut;
   date date_fin;
   int nb_personnes;
   float tarif;
-  enum statut {"EN COURS", "ACHEVEE"};
+  enum statut {EN_COURS = 1, ACHEVEE} statut;
 
 } reservation ;
 
-
+int creer_reservation(int id_reservation, const char * const nom_client, const char * const nom_salle_reservation, date date_debut, date date_fin, int nb_personnes, float tarif, char statut);
  
-#endif /* ifndef utils
-#define utils */
+#endif

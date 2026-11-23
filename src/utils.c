@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-#include <cjson.h>
-#include "utils.h"
+#include <cjson/cJSON.h>
+#include "../include/utils.h"
 
 
 void creer_reservation(int id_reservation, char nom_client, char salle_reservation, date date_debut, date date_fin, int nb_personnes, float tarif, char statut) {

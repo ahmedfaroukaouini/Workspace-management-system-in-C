@@ -31,4 +31,22 @@ int main() {
   creer_reservation(R1.id_reservation, R1.nom_client, R1.nom_salle_reservation, R1.date_debut, R1.date_fin, R1.nb_personnes, R1.tarif, R1.statut_reservation);
 */
 
+  salle* salles;
+  charger_salles("data/salles.json", &salles);
+
+  printf("%d", salles[1].capacite);
+
+  /*
+  for (int i = 0; i<50 ; i++) {
+
+  }
+  */
+
+
+
+
+
+  free(salles);
+
+
 }

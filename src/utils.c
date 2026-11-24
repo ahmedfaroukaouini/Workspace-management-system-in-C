@@ -118,11 +118,13 @@ int charger_salles(const char* path, salle** tableau_salles) {
       (*tableau_salles)[i].statut = statut->valueint;
     }
 
-    cJSON_Delete(root);
+    
 
     
   }
-  return 1;  
+
+  cJSON_Delete(root);
+  return nb_salles;  
 } 
 
 

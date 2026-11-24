@@ -28,7 +28,8 @@ typedef struct {
   int capacite;
   float tarif_horaire;
   char equipements[255];
-
+  enum statut {LIBRE = 0, RESERVEE} statut;
+  
 
 } salle ;
 

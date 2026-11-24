@@ -42,3 +42,49 @@ int creer_reservation(int id_reservation, const char * const  nom_client,const c
    return 0;
 
 }
+
+ 
+
+char* read_data(const char* path) {
+  
+  FILE* f = fopen(path, "rb");
+  
+  if (!f) {
+    perror("Error opening file !");
+    return NULL
+  }
+
+  fseek(f, 0, SEEK_END);
+  long taille = ftell(f);
+  rewind(f);
+  
+  char* raw_data = (char*)malloc(taille + 1);
+
+  if (raw_data) {
+    fread(raw_data, 1, taille, f);
+    raw_data[taille] = '\0';
+  }
+
+  fclose(f);
+  return raw_data;
+  
+}
+
+// function that loads data from salles.json into an array 
+void charger_salles(const char* path, salle** tableau_salles) {
+  char* json_raw_data = read_data(path);
+  if (!json_raw_data) return -1;
+  cJSON* root = cJSON_Parse(json_raw_data);
+  free(json_raw_data);
+  if (!root || !cJSON_Parse(root)){
+    fprintf(stderr, "Erreur de parsing JSON ou le format n'est pas un tableau.\n");
+    if (root) cJSON_Delete(root);
+    return -1;
+  }
+  
+} 
+
+
+void vérifier_disponible() // fonction qui vérifie s'il y a au moins une salle disponible 
+
+

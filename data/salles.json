@@ -1,0 +1,352 @@
+[
+  {
+    "nom": "Salle Pythagore",
+    "capacite": 150,
+    "tarif_horaire": 132.5,
+    "equipements": "Climatisation, Système de visioconférence, Écran TV connecté",
+    "statut": 0
+  },
+  {
+    "nom": "Salle Euclide",
+    "capacite": 200,
+    "tarif_horaire": 170.0,
+    "equipements": "Accès PMR, Système audio surround, Projecteur 4K",
+    "statut": 0
+  },
+  {
+    "nom": "Salle Archimède",
+    "capacite": 20,
+    "tarif_horaire": 40.0,
+    "equipements": "Écran TV connecté, Projecteur 4K, Système de visioconférence, Prises électriques individuelles",
+    "statut": 1
+  },
+  {
+    "nom": "Salle Thalès",
+    "capacite": 30,
+    "tarif_horaire": 57.5,
+    "equipements": "Projecteur 4K, Wi-Fi haut débit, Système audio surround, Écran TV connecté, Tableau noir classique",
+    "statut": 0
+  },
+  {
+    "nom": "Salle Hypatie",
+    "capacite": 30,
+    "tarif_horaire": 52.5,
+    "equipements": "Tableau blanc interactif, Système audio surround, Accès PMR",
+    "statut": 1
+  },
+  {
+    "nom": "Salle Al-Khwarizmi",
+    "capacite": 50,
+    "tarif_horaire": 67.5,
+    "equipements": "Tableau noir classique, Écran TV connecté, Tableau blanc interactif",
+    "statut": 1
+  },
+  {
+    "nom": "Salle Omar Khayyam",
+    "capacite": 20,
+    "tarif_horaire": 45.0,
+    "equipements": "Accès PMR, Système de visioconférence, Tableau blanc interactif, Projecteur 4K, Prises électriques individuelles",
+    "statut": 0
+  },
+  {
+    "nom": "Salle Fibonacci",
+    "capacite": 40,
+    "tarif_horaire": 50.0,
+    "equipements": "Tableau blanc interactif, Système audio surround, Climatisation, Système de visioconférence",
+    "statut": 1
+  },
+  {
+    "nom": "Salle René Descartes",
+    "capacite": 25,
+    "tarif_horaire": 48.75,
+    "equipements": "Système de visioconférence, Climatisation, Tableau blanc interactif, Écran TV connecté, Prises électriques individuelles",
+    "statut": 0
+  },
+  {
+    "nom": "Salle Pierre de Fermat",
+    "capacite": 100,
+    "tarif_horaire": 100.0,
+    "equipements": "Tableau noir classique, Système audio surround, Climatisation, Prises électriques individuelles",
+    "statut": 0
+  },
+  {
+    "nom": "Salle Blaise Pascal",
+    "capacite": 150,
+    "tarif_horaire": 142.5,
+    "equipements": "Système de visioconférence, Projecteur 4K, Prises électriques individuelles",
+    "statut": 1
+  },
+  {
+    "nom": "Salle Isaac Newton",
+    "capacite": 40,
+    "tarif_horaire": 50.0,
+    "equipements": "Accès PMR, Prises électriques individuelles, Système de visioconférence, Écran TV connecté",
+    "statut": 1
+  },
+  {
+    "nom": "Salle Gottfried Wilhelm Leibniz",
+    "capacite": 60,
+    "tarif_horaire": 80.0,
+    "equipements": "Climatisation, Wi-Fi haut débit, Système de visioconférence, Prises électriques individuelles",
+    "statut": 1
+  },
+  {
+    "nom": "Salle Leonhard Euler",
+    "capacite": 200,
+    "tarif_horaire": 185.0,
+    "equipements": "Prises électriques individuelles, Système de visioconférence, Wi-Fi haut débit, Climatisation, Écran TV connecté, Projecteur 4K",
+    "statut": 0
+  },
+  {
+    "nom": "Salle Joseph-Louis Lagrange",
+    "capacite": 20,
+    "tarif_horaire": 40.0,
+    "equipements": "Système audio surround, Tableau blanc interactif, Accès PMR, Système de visioconférence",
+    "statut": 1
+  },
+  {
+    "nom": "Salle Pierre-Simon de Laplace",
+    "capacite": 100,
+    "tarif_horaire": 105.0,
+    "equipements": "Tableau blanc interactif, Écran TV connecté, Climatisation",
+    "statut": 1
+  },
+  {
+    "nom": "Salle Carl Friedrich Gauss",
+    "capacite": 20,
+    "tarif_horaire": 45.0,
+    "equipements": "Wi-Fi haut débit, Tableau noir classique, Projecteur 4K, Prises électriques individuelles, Système audio surround, Accès PMR",
+    "statut": 0
+  },
+  {
+    "nom": "Salle Sophie Germain",
+    "capacite": 100,
+    "tarif_horaire": 95.0,
+    "equipements": "Écran TV connecté, Système de visioconférence, Wi-Fi haut débit, Tableau noir classique, Tableau blanc interactif",
+    "statut": 0
+  },
+  {
+    "nom": "Salle Augustin-Louis Cauchy",
+    "capacite": 120,
+    "tarif_horaire": 120.0,
+    "equipements": "Projecteur 4K, Tableau blanc interactif, Prises électriques individuelles, Système audio surround, Wi-Fi haut débit, Écran TV connecté",
+    "statut": 0
+  },
+  {
+    "nom": "Salle Niels Henrik Abel",
+    "capacite": 30,
+    "tarif_horaire": 42.5,
+    "equipements": "Tableau noir classique, Tableau blanc interactif, Wi-Fi haut débit",
+    "statut": 0
+  },
+  {
+    "nom": "Salle Évariste Galois",
+    "capacite": 150,
+    "tarif_horaire": 147.5,
+    "equipements": "Climatisation, Écran TV connecté, Système audio surround, Tableau blanc interactif",
+    "statut": 0
+  },
+  {
+    "nom": "Salle Bernhard Riemann",
+    "capacite": 200,
+    "tarif_horaire": 180.0,
+    "equipements": "Prises électriques individuelles, Tableau noir classique, Écran TV connecté, Projecteur 4K, Tableau blanc interactif, Accès PMR",
+    "statut": 0
+  },
+  {
+    "nom": "Salle Ada Lovelace",
+    "capacite": 50,
+    "tarif_horaire": 57.5,
+    "equipements": "Accès PMR, Système de visioconférence, Projecteur 4K, Tableau noir classique",
+    "statut": 0
+  },
+  {
+    "nom": "Salle George Boole",
+    "capacite": 30,
+    "tarif_horaire": 42.5,
+    "equipements": "Prises électriques individuelles, Tableau blanc interactif, Système de visioconférence",
+    "statut": 1
+  },
+  {
+    "nom": "Salle Georg Cantor",
+    "capacite": 150,
+    "tarif_horaire": 147.5,
+    "equipements": "Écran TV connecté, Wi-Fi haut débit, Tableau noir classique, Tableau blanc interactif",
+    "statut": 1
+  },
+  {
+    "nom": "Salle Henri Poincaré",
+    "capacite": 60,
+    "tarif_horaire": 70.0,
+    "equipements": "Tableau blanc interactif, Système audio surround, Prises électriques individuelles",
+    "statut": 1
+  },
+  {
+    "nom": "Salle David Hilbert",
+    "capacite": 60,
+    "tarif_horaire": 80.0,
+    "equipements": "Tableau blanc interactif, Projecteur 4K, Système audio surround",
+    "statut": 1
+  },
+  {
+    "nom": "Salle Emmy Noether",
+    "capacite": 20,
+    "tarif_horaire": 40.0,
+    "equipements": "Système de visioconférence, Écran TV connecté, Tableau noir classique, Tableau blanc interactif",
+    "statut": 1
+  },
+  {
+    "nom": "Salle Srinivasa Ramanujan",
+    "capacite": 25,
+    "tarif_horaire": 48.75,
+    "equipements": "Système de visioconférence, Tableau blanc interactif, Tableau noir classique, Système audio surround, Climatisation, Projecteur 4K",
+    "statut": 0
+  },
+  {
+    "nom": "Salle Stefan Banach",
+    "capacite": 150,
+    "tarif_horaire": 132.5,
+    "equipements": "Système de visioconférence, Wi-Fi haut débit, Système audio surround",
+    "statut": 1
+  },
+  {
+    "nom": "Salle John von Neumann",
+    "capacite": 80,
+    "tarif_horaire": 85.0,
+    "equipements": "Projecteur 4K, Wi-Fi haut débit, Système audio surround, Accès PMR, Système de visioconférence, Écran TV connecté",
+    "statut": 1
+  },
+  {
+    "nom": "Salle Kurt Gödel",
+    "capacite": 40,
+    "tarif_horaire": 65.0,
+    "equipements": "Wi-Fi haut débit, Système de visioconférence, Climatisation, Tableau blanc interactif, Projecteur 4K, Tableau noir classique",
+    "statut": 0
+  },
+  {
+    "nom": "Salle Alan Turing",
+    "capacite": 200,
+    "tarif_horaire": 180.0,
+    "equipements": "Projecteur 4K, Tableau noir classique, Wi-Fi haut débit",
+    "statut": 0
+  },
+  {
+    "nom": "Salle Claude Shannon",
+    "capacite": 100,
+    "tarif_horaire": 95.0,
+    "equipements": "Tableau blanc interactif, Accès PMR, Système de visioconférence, Tableau noir classique",
+    "statut": 0
+  },
+  {
+    "nom": "Salle Katherine Johnson",
+    "capacite": 120,
+    "tarif_horaire": 115.0,
+    "equipements": "Accès PMR, Tableau blanc interactif, Système audio surround",
+    "statut": 1
+  },
+  {
+    "nom": "Salle Alexander Grothendieck",
+    "capacite": 40,
+    "tarif_horaire": 55.0,
+    "equipements": "Système de visioconférence, Climatisation, Système audio surround, Tableau blanc interactif, Prises électriques individuelles",
+    "statut": 1
+  },
+  {
+    "nom": "Salle John Nash",
+    "capacite": 80,
+    "tarif_horaire": 90.0,
+    "equipements": "Projecteur 4K, Tableau noir classique, Tableau blanc interactif",
+    "statut": 0
+  },
+  {
+    "nom": "Salle Maryam Mirzakhani",
+    "capacite": 100,
+    "tarif_horaire": 100.0,
+    "equipements": "Wi-Fi haut débit, Prises électriques individuelles, Tableau blanc interactif, Tableau noir classique, Accès PMR",
+    "statut": 1
+  },
+  {
+    "nom": "Salle Terence Tao",
+    "capacite": 25,
+    "tarif_horaire": 53.75,
+    "equipements": "Accès PMR, Écran TV connecté, Projecteur 4K, Prises électriques individuelles, Climatisation",
+    "statut": 1
+  },
+  {
+    "nom": "Salle Andrew Wiles",
+    "capacite": 150,
+    "tarif_horaire": 132.5,
+    "equipements": "Climatisation, Tableau blanc interactif, Écran TV connecté, Prises électriques individuelles",
+    "statut": 0
+  },
+  {
+    "nom": "Salle Grigori Perelman",
+    "capacite": 40,
+    "tarif_horaire": 60.0,
+    "equipements": "Prises électriques individuelles, Système de visioconférence, Climatisation, Tableau noir classique",
+    "statut": 1
+  },
+  {
+    "nom": "Salle Benoît Mandelbrot",
+    "capacite": 40,
+    "tarif_horaire": 50.0,
+    "equipements": "Système audio surround, Climatisation, Projecteur 4K",
+    "statut": 0
+  },
+  {
+    "nom": "Salle Cédric Villani",
+    "capacite": 50,
+    "tarif_horaire": 62.5,
+    "equipements": "Wi-Fi haut débit, Tableau noir classique, Système audio surround, Climatisation, Projecteur 4K",
+    "statut": 0
+  },
+  {
+    "nom": "Salle Émilie du Châtelet",
+    "capacite": 20,
+    "tarif_horaire": 40.0,
+    "equipements": "Prises électriques individuelles, Écran TV connecté, Wi-Fi haut débit",
+    "statut": 1
+  },
+  {
+    "nom": "Salle Maria Gaetana Agnesi",
+    "capacite": 25,
+    "tarif_horaire": 38.75,
+    "equipements": "Prises électriques individuelles, Projecteur 4K, Accès PMR, Tableau blanc interactif, Tableau noir classique",
+    "statut": 0
+  },
+  {
+    "nom": "Salle Sofia Kovalevskaya",
+    "capacite": 150,
+    "tarif_horaire": 132.5,
+    "equipements": "Écran TV connecté, Système audio surround, Wi-Fi haut débit, Tableau blanc interactif, Accès PMR",
+    "statut": 0
+  },
+  {
+    "nom": "Salle Julia Robinson",
+    "capacite": 60,
+    "tarif_horaire": 65.0,
+    "equipements": "Prises électriques individuelles, Système audio surround, Système de visioconférence, Wi-Fi haut débit",
+    "statut": 0
+  },
+  {
+    "nom": "Salle Paul Erdős",
+    "capacite": 200,
+    "tarif_horaire": 170.0,
+    "equipements": "Projecteur 4K, Tableau noir classique, Système de visioconférence, Tableau blanc interactif, Écran TV connecté, Wi-Fi haut débit",
+    "statut": 1
+  },
+  {
+    "nom": "Salle Gaspard Monge",
+    "capacite": 30,
+    "tarif_horaire": 47.5,
+    "equipements": "Système de visioconférence, Système audio surround, Prises électriques individuelles",
+    "statut": 1
+  },
+  {
+    "nom": "Salle Jean-Baptiste Joseph Fourier",
+    "capacite": 20,
+    "tarif_horaire": 45.0,
+    "equipements": "Écran TV connecté, Système audio surround, Prises électriques individuelles, Projecteur 4K, Accès PMR",
+    "statut": 1
+  }
+]

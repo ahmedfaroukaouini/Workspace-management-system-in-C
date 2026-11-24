@@ -122,7 +122,7 @@ int charger_salles(const char* path, salle** tableau_salles) {
 
     
   }
-  
+  return 1;  
 } 
 
 

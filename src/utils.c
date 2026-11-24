@@ -51,7 +51,7 @@ char* read_data(const char* path) {
   
   if (!f) {
     perror("Error opening file !");
-    return NULL
+    return NULL;
   }
 
   fseek(f, 0, SEEK_END);
@@ -71,20 +71,69 @@ char* read_data(const char* path) {
 }
 
 // function that loads data from salles.json into an array 
-void charger_salles(const char* path, salle** tableau_salles) {
+int charger_salles(const char* path, salle** tableau_salles) {
   char* json_raw_data = read_data(path);
   if (!json_raw_data) return -1;
   cJSON* root = cJSON_Parse(json_raw_data);
   free(json_raw_data);
-  if (!root || !cJSON_Parse(root)){
+  if (!root || !cJSON_IsArray(root)){
     fprintf(stderr, "Erreur de parsing JSON ou le format n'est pas un tableau.\n");
     if (root) cJSON_Delete(root);
     return -1;
+  }
+  int nb_salles = cJSON_GetArraySize(root);
+  *tableau_salles = (salle*)malloc(nb_salles * sizeof(salle));
+  if (!*tableau_salles) {
+    cJSON_Delete(root);
+    return -1;
+  }
+  for (int i = 0; i < nb_salles ; i++) {
+    cJSON* item = cJSON_GetArrayItem(root, i);
+    cJSON* nom = cJSON_GetObjectItemCaseSensitive(item, "nom");
+    cJSON* capacite = cJSON_GetObjectItemCaseSensitive(item, "capacite");
+    cJSON* tarif_horaire = cJSON_GetObjectItemCaseSensitive(item, "tarif_horaire");
+    cJSON* equipements = cJSON_GetObjectItemCaseSensitive(item, "equipements");
+    cJSON* statut = cJSON_GetObjectItemCaseSensitive(item, "statut");
+
+    // vérificatin des erreurs et remplissage du tableau_salles
+    if (cJSON_IsString(nom) && nom->valuestring){
+      strncpy((*tableau_salles)[i].nom, nom->valuestring,sizeof((*tableau_salles)[i].nom)-1);
+      (*tableau_salles)[i].nom[sizeof((*tableau_salles)[i].nom) - 1] = '\0';
+    }
+
+    if (cJSON_IsNumber(capacite) && capacite->valueint) {
+      (*tableau_salles)[i].capacite = capacite->valueint;
+    }
+
+    if (cJSON_IsNumber(tarif_horaire) && tarif_horaire->valuedouble) {
+      (*tableau_salles)[i].tarif_horaire = tarif_horaire->valuedouble;
+    }
+
+    if (cJSON_IsString(equipements) && equipements->valuestring) {
+      strncpy((*tableau_salles)[i].equipements, equipements->valuestring, sizeof((*tableau_salles)[i].equipements) -1);
+      (*tableau_salles)[i].equipements[sizeof((*tableau_salles)[i].equipements) - 1] = '\0';
+    }
+
+    if (cJSON_IsNumber(statut) && statut->valueint) {
+      (*tableau_salles)[i].statut = statut->valueint;
+    }
+
+    cJSON_Delete(root);
+
+    
   }
   
 } 
 
 
-void vérifier_disponible() // fonction qui vérifie s'il y a au moins une salle disponible 
+
+
+
+
+
+
+
+
+// void vérifier_disponible() // fonction qui vérifie s'il y a au moins une salle disponible 
 
 

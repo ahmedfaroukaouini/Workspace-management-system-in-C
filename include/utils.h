@@ -24,7 +24,7 @@ typedef struct {
 
 
 typedef struct {
-  char nom;
+  char nom[100];
   int capacite;
   float tarif_horaire;
   char equipements[255];
@@ -44,10 +44,16 @@ typedef struct {
   date date_fin;
   int nb_personnes;
   float tarif;
-  enum statut {EN_COURS = 1, ACHEVEE} statut;
+  enum statut_reservation {EN_COURS = 1, ACHEVEE} statut_reservation;
 
 } reservation ;
 
 int creer_reservation(int id_reservation, const char * const nom_client, const char * const nom_salle_reservation, date date_debut, date date_fin, int nb_personnes, float tarif, char statut);
- 
+
+char* read_data(const char* path);
+int charger_salles(const char* path, salle** tableau_salles);
+
+
+
+
 #endif

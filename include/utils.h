@@ -52,6 +52,7 @@ int creer_reservation(int id_reservation, const char * const nom_client, const c
 
 char* read_data(const char* path);
 int charger_salles(const char* path, salle** tableau_salles);
+void verifier_disponible();
 
 
 

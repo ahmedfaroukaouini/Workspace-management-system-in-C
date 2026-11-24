@@ -118,7 +118,7 @@ int charger_salles(const char* path, salle** tableau_salles) {
       (*tableau_salles)[i].statut = statut->valueint;
     }
 
-    
+   
 
     
   }
@@ -127,15 +127,24 @@ int charger_salles(const char* path, salle** tableau_salles) {
   return nb_salles;  
 } 
 
+// fonction qui vérifie s'il y a au moins une salle disponible 
 
-
-
-
-
-
-
-
-
-// void vérifier_disponible() // fonction qui vérifie s'il y a au moins une salle disponible 
-
+void verifier_disponible(){
+  salle* salles;
+  charger_salles("data/salles.json", &salles);
+  char salles_dispo[2000] ;
+  for (int i = 0; i<50; i++){
+    if (salles[i].statut == 0){
+      strcat(salles_dispo, salles[i].nom);
+      strcat(salles_dispo, "\n");
+    }    
+  }
+  if (strcpm(salles_dispo, "")){
+    printf("Aucune salle n'est disponible")
+  }
+  else {
+    printf("%s", salles_dispo);
+  }
+  free(salles);
+}
 

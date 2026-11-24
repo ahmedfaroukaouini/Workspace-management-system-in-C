@@ -33,20 +33,16 @@ int main() {
 
   salle* salles;
   charger_salles("data/salles.json", &salles);
-
-  printf("%d", salles[1].capacite);
-
-  /*
-  for (int i = 0; i<50 ; i++) {
-
-  }
-  */
-
-
-
-
-
   free(salles);
+
+  //printf("%d", salles[1].capacite);
+
+  verifier_disponible();
+
+
+
+
+
 
 
 }

@@ -33,12 +33,18 @@ int main() {
 
   salle* salles;
   charger_salles("data/salles.json", &salles);
+ /* 
+  for (int i = 0; i<50; i++){
+    printf("%s\n", salles[i].nom);
+  }
+  
+  printf("%d", salles[1].statut);
+*/ 
+  verifier_disponible(salles);
+  bool test;
+  test = verifier_capacite("Salle Gottfried Wilhelm Leibniz", 50, salles);
+  printf("%b", test);
   free(salles);
-
-  //printf("%d", salles[1].capacite);
-
-  verifier_disponible();
-
 
 
 

@@ -51,9 +51,9 @@ typedef struct {
 int creer_reservation(int id_reservation, const char * const nom_client, const char * const nom_salle_reservation, date date_debut, date date_fin, int nb_personnes, float tarif, char statut);
 
 char* read_data(const char* path);
-int charger_salles(const char* path, salle** tableau_salles);
-void verifier_disponible();
-
+void charger_salles(const char* path, salle** tableau_salles);
+void verifier_disponible(salle* salles);
+bool verifier_capacite(const char* nom_salle, int nb_guest, salle* salles);
 
 
 

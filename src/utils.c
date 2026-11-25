@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
+#include <stdbool.h>
 #include <cjson/cJSON.h>
 #include "../include/utils.h"
 
@@ -71,21 +72,21 @@ char* read_data(const char* path) {
 }
 
 // function that loads data from salles.json into an array 
-int charger_salles(const char* path, salle** tableau_salles) {
+void charger_salles(const char* path, salle** tableau_salles) {
   char* json_raw_data = read_data(path);
-  if (!json_raw_data) return -1;
+  if (!json_raw_data) perror("error reading json");
   cJSON* root = cJSON_Parse(json_raw_data);
   free(json_raw_data);
   if (!root || !cJSON_IsArray(root)){
     fprintf(stderr, "Erreur de parsing JSON ou le format n'est pas un tableau.\n");
     if (root) cJSON_Delete(root);
-    return -1;
+  
   }
   int nb_salles = cJSON_GetArraySize(root);
   *tableau_salles = (salle*)malloc(nb_salles * sizeof(salle));
   if (!*tableau_salles) {
     cJSON_Delete(root);
-    return -1;
+    
   }
   for (int i = 0; i < nb_salles ; i++) {
     cJSON* item = cJSON_GetArrayItem(root, i);
@@ -124,27 +125,37 @@ int charger_salles(const char* path, salle** tableau_salles) {
   }
 
   cJSON_Delete(root);
-  return nb_salles;  
+    
 } 
 
 // fonction qui vérifie s'il y a au moins une salle disponible 
 
-void verifier_disponible(){
-  salle* salles;
-  charger_salles("data/salles.json", &salles);
-  char salles_dispo[2000] ;
+void verifier_disponible( salle* salles){
+  int x = 1;
   for (int i = 0; i<50; i++){
-    if (salles[i].statut == 0){
-      strcat(salles_dispo, salles[i].nom);
-      strcat(salles_dispo, "\n");
-    }    
+    x = x*(salles[i].statut);
   }
-  if (strcpm(salles_dispo, "")){
-    printf("Aucune salle n'est disponible")
+  if (x == 0) {
+    for (int i = 0; i<50; i++){
+      if (salles[i].statut == 0){
+        printf("%s\n",salles[i].nom);
+      }    
+    }
   }
-  else {
-    printf("%s", salles_dispo);
+  else{
+      printf("Aucune salle n'est disponible");
   }
-  free(salles);
+}
+
+
+// fonction qui vérifie que la salle a la capcité suffisante
+bool verifier_capacite(const char* nom_salle, int nb_guest, salle* salles) {
+  bool test = false;
+  for (int i = 0; i<50; i++) {
+    if (strcmp(salles[i].nom, nom_salle) && nb_guest<=salles[i].capacite) {
+      test = true;
+    }
+  }
+  return test;
 }
 
